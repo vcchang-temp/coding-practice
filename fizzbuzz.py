@@ -3,8 +3,13 @@
 # multiples of 5, add "Buzz" to the list; for multiples of both 3 and 5,
 # add "FizzBuzz" to the list.
 
+# Naive approach
+# Time: O(n) -> must iterate through all nums of n
+# Space: O(1) -> storage bounded by constant
+
 def fizzBuzz(n: int):
     list = []
+
     for i in range(1, n+1):
         if i % 3 == 0 and i % 5 == 0:
             list.append("FizzBuzz")
@@ -14,6 +19,7 @@ def fizzBuzz(n: int):
             list.append("Buzz")
         else:
             list.append(str(i))
+
     return list
 
 if __name__ == "__main__":
