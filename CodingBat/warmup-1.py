@@ -1,7 +1,7 @@
 # Practicing Python to learn basic syntax
 # https://codingbat.com/python
 
-# Warmup1
+# Warmup-1
 
 def sleep_in(weekday, vacation):
   return not weekday or vacation
