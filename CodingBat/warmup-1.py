@@ -2,6 +2,7 @@
 # https://codingbat.com/python
 
 # Warmup-1
+#Simple warmup problems to get started, no loops
 
 def sleep_in(weekday, vacation):
   return not weekday or vacation

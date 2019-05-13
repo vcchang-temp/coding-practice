@@ -2,7 +2,9 @@
 # https://codingbat.com/python
 
 # List-1
-# Basic python list problems -- no loops.. Use a[0], a[1], ... to access elements in a list, len(a) is the length.
+# Basic python list problems -- no loops.. 
+# Use a[0], a[1], ... to access elements 
+# in a list, len(a) is the length.
 
 def first_last6(nums):
   return nums[0] == 6 or nums[-1] == 6
