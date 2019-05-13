@@ -2,7 +2,7 @@
 # https://codingbat.com/python
 
 # Warmup-2
-#Medium warmup string/list problems with loops
+# Medium warmup string/list problems with loops
 
 def string_times(str, n):
   return str * n
