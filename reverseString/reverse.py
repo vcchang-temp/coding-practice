@@ -1,5 +1,9 @@
 # Reverse a string
 
+# Input: str
+
+# Approach: can't do in-place because strings are immutable in Python
+
 # Time: O(n) -> must go through each letter in string of n length
 # Space: O(n) -> create new string of length n
 
