@@ -15,7 +15,7 @@ import math
 def isPalindrome(s: str):
     stack = []
     halfway = math.floor(len(s)/2)
-    for i in range(0, halfway):
+    for i in range(halfway):
         stack.append(s[i])
     
     start = halfway if len(s) % 2 == 0 else halfway + 1
