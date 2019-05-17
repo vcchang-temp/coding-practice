@@ -4,6 +4,8 @@
 
 # Input: non-empty string s
 
+# Assumptions: no spaces in s
+
 # Front and back pointer approach
 # Time: O(n)  -> compare char of s of len n;
 #                checking n/2 chars -> O(n/2) ~= O(n)
