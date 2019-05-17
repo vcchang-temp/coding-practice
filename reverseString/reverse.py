@@ -10,12 +10,12 @@
 def reverse(s: str):
     if s == None:
         return ""
-    reversedStr = ""
+    reversedStr = []
 
     for i in reversed(range(len(s))):
-        reversedStr += s[i]
+        reversedStr.append(s[i])
     
-    return reversedStr
+    return "".join(reversedStr)
 
 if __name__ == "__main__":
     expected = "gnirts"

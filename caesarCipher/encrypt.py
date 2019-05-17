@@ -11,7 +11,7 @@
 # Space: O(n) -> returned string grows proportionally with s length
 
 def encrypt(s: str, k: int):
-    encryptedS = ""
+    encryptedS = []
     begOfAlpha = 96
     endOfAlpha = 122
 
@@ -22,9 +22,9 @@ def encrypt(s: str, k: int):
         while shiftedCharDec > endOfAlpha:
             shiftedCharDec = begOfAlpha + (shiftedCharDec % endOfAlpha)
         
-        encryptedS += chr(shiftedCharDec)
+        encryptedS.append(chr(shiftedCharDec))
 
-    return encryptedS
+    return "".join(encryptedS)
 
 if __name__ == "__main__":
     secret = "themoneyisinthemattress"
