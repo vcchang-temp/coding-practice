@@ -7,7 +7,9 @@
 # Assumptions: no spaces in s
 
 # Reverse string approach
-# Time: O(n)  -> check each character in s of len n
+# Time: O(n^2)  -> check each character in s of len n + iterate 
+#                  through each character of old string to create
+#                  new string
 # Space: O(n) -> new string needs n space
 
 def isPalindrome(s: str):
