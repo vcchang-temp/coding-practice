@@ -5,8 +5,8 @@
 # Input: non-empty string s
 
 # Stack approach
-# Time: O(n)  -> 
-# Space: O(n) -> 
+# Time: O(n)  -> check each character in s of len n
+# Space: O(n) -> stack needs at most n/2 space -> O(n/2) ~= O(n)
 
 import math
 
