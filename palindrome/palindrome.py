@@ -2,9 +2,9 @@
 
 # Palindrome: string spelt the same forwards and backwards
 
-# Input: non-empty string
+# Input: non-empty string s
 
-# Time: O(n)  -> compare char of given string of len n;
+# Time: O(n)  -> compare char of s of len n;
 #                checking n/2 chars -> O(n/2) ~= O(n)
 # Space: O(1) -> space needed does not grow with given input
 

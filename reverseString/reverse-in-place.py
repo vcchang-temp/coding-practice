@@ -1,8 +1,8 @@
 # Reverse string
 
-# Input: List[str]
+# Input: list of one-character strings, s
 
-# Time: O(n) -> going through n/2 characters (list len = n) = O(n/2) ~= O(n)
+# Time: O(n) -> going through n/2 (list len = n) characters = O(n/2) ~= O(n)
 # Space: O(1) -> using given list space to create reversed string
 
 from typing import List

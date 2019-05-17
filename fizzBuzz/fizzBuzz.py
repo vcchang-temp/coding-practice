@@ -1,7 +1,11 @@
-# FizzBuzz: write a program that returns a list of string representations
+# FizzBuzz
+
+# Write a program that returns a list of string representations
 # of numbers 1 to n. For multiples of 3, add "Fizz" to the list; for 
 # multiples of 5, add "Buzz" to the list; for multiples of both 3 and 5,
 # add "FizzBuzz" to the list.
+
+# Input: non-negative integer n
 
 # Naive approach
 # Time: O(n) -> must iterate through all nums of n

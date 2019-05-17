@@ -1,6 +1,6 @@
 # Reverse a string
 
-# Input: str
+# Input: string s
 
 # Approach: can't do in-place because strings are immutable in Python
 
