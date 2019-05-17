@@ -16,11 +16,7 @@ def isPalindrome(s: str):
     for i in reversed(range(len(s))):
         reversedS += s[i]
     
-    for i in range(len(s)):
-        if s[i] != reversedS[i]:
-            return False
-    else:
-        return True
+    return s == reversedS
 
 if __name__ == "__main__":
     evenPalindrome = "hannah"
