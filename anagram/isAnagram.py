@@ -2,8 +2,10 @@
 
 # Input: string s1, string s2
 
-# Time: O(maxLen(n, m)) -> bounded by len of longest string
-# Space: O(n + m) -> need space for dictionaries with n + m keys
+# Time: O(max(n, m)) -> bounded by len of longest string
+#                       (s1 with len n and s2 with len m)
+# Space: O(n + m)    -> need space for dictionaries with 
+#                       n and m keys
 
 def isAnagram(s1: str, s2: str):
     if s1 == None or s2 == None:
