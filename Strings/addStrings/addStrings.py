@@ -1,6 +1,6 @@
 # Add strings
 
-# Input: non-negative ints num1, num2 between 0-9
+# Input: non-negative ints num1, num2, digits between 0-9
 
 # Math modulo and power approach
 # Time: O(n^2)    -> convert 2n chars to digits and sum to string  
