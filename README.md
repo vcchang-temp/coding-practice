@@ -4,3 +4,4 @@ This repo is just for me to host my solutions to interview coding questions. I w
 
 Questions are arranged by category:
 * [Strings](https://github.com/vcchang/coding-practice/tree/master/Strings)
+* [Arrays](https://github.com/vcchang/coding-practice/tree/master/Arrays)
