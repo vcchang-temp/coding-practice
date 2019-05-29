@@ -2,32 +2,24 @@
 
 # Input: array of non-negative integers, arr
 
-# In-place approach
-# Time: O(n)  -> check every int (and no need to swap)
-# Space: O(1) -> in-place uses no extra space
+# New array approach
+# Time: O(n)  -> check every int and place into
+#                appropriate array
+# Space: O(n) -> create new array of len n of arr
 
 from typing import List
 import copy
 
 def sort(arr: List[int]):
-    front = 0
-    back = len(arr) - 1
+    evenArr = []
+    oddArr = []
     for num in arr:
-        if num % 2 != 0:
-            arrBackTuple = swap(arr, front, back)
-            arr = arrBackTuple[0]
-            front += 1
-            back = arrBackTuple[1]
-        if back - front <= 1:
-            break
-        front += 1
-    return arr
-
-def swap(arr: List[int], front: int,  back: int):
-    while arr[back] % 2 != 0 and back > 0:
-        back -= 1
-    arr[front], arr[back] = arr[back], arr[front]
-    return (arr, back)
+        if num % 2 == 0:
+            evenArr.append(num)
+        else:
+            oddArr.append(num)    
+    evenArr.extend(oddArr)
+    return evenArr
 
 if __name__ == "__main__":
     arr = [4, 3, 2, 1, 5]
@@ -36,6 +28,13 @@ if __name__ == "__main__":
     actual = sort(arr)
     assert actual == expected
     print(f"Yay sorted the array {originalArr} by parity! Result: {actual}")
+
+    arr2 = [3, 1, 2, 4]
+    originalArr2 = copy.deepcopy(arr2)
+    expected2 = [2, 4, 3, 1]
+    actual2 = sort(arr2)
+    assert actual2 == expected2
+    print(f"Yay sorted the array {originalArr2} by parity! Result: {actual2}")
 
     emptyArr = []
     originalEmptyArr = []
