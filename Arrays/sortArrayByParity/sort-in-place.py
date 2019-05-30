@@ -13,16 +13,13 @@ def sort(arr: List[int]):
     front = 0
     back = len(arr) - 1
 
-    for num in arr:
-        if num % 2 != 0:
-            while arr[back] % 2 != 0 and back > 0:
+    while back > front:
+        if arr[front] % 2 != 0:
+            while arr[back] % 2 != 0 and back > front:
                 back -= 1
             arr[front], arr[back] = arr[back], arr[front]
             front += 1
             back -= 1
-            
-            if back <= front:
-                break
         else:
             front += 1
     return arr
@@ -62,3 +59,31 @@ if __name__ == "__main__":
     actualOddOnly = sort(arrOddOnly)
     assert actualOddOnly == expectedOddOnly
     print(f"No sorting needed for this odd-only array: {originalOddOnlyArr}. Result: {actualOddOnly}")
+
+    arrOneElem = [0]
+    originalOneElemArr = copy.deepcopy(arrOneElem)
+    expectedOneElem = [0]
+    actualOneElem = sort(arrOneElem)
+    assert actualOneElem == expectedOneElem
+    print(f"Yay sorted the array {originalOneElemArr} by parity! Result: {actualOneElem}")
+
+    arrTwoElem = [0, 1]
+    originalTwoElemArr = copy.deepcopy(arrTwoElem)
+    expectedTwoElem = [0, 1]
+    actualTwoElem = sort(arrTwoElem)
+    assert actualTwoElem == expectedTwoElem
+    print(f"Yay sorted the array {originalTwoElemArr} by parity! Result: {actualTwoElem}")
+
+    arrTwoElem2 = [1, 0]
+    originalTwoElemArr2 = copy.deepcopy(arrTwoElem2)
+    expectedTwoElem2 = [0, 1]
+    actualTwoElem2 = sort(arrTwoElem2)
+    assert actualTwoElem2 == expectedTwoElem2
+    print(f"Yay sorted the array {originalTwoElemArr2} by parity! Result: {actualTwoElem2}")
+
+    arrThreeElem = [0, 1, 3]
+    originalThreeElemArr = copy.deepcopy(arrThreeElem)
+    expectedThreeElem = [0, 1, 3]
+    actualThreeElem = sort(arrThreeElem)
+    assert actualThreeElem == expectedThreeElem
+    print(f"Yay sorted the array {originalThreeElemArr} by parity! Result: {actualThreeElem}")
