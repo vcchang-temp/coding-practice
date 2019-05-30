@@ -3,8 +3,8 @@
 # Input: array of non-negative integers, arr
 
 # Two-pass approach
-# Time: O(n)  -> check every int and place into
-#                appropriate array
+# Time: O(n)  -> check every int (twice) and place into
+#                appropriate array; overall still O(n)
 # Space: O(n) -> create new array of len n of arr
 
 from typing import List
