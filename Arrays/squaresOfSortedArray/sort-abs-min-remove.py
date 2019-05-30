@@ -9,8 +9,8 @@
 #                 find min for each int in arr of len n +
 #                 remove min from arr of len n -> O(n*(n+n)) 
 #                 ~= O(n^2)
-# Space: O(n)    -> list comprehension creates new 
-#                   list of len n of arr
+# Space: O(n)  -> list comprehension creates new 
+#                 list of len n of arr
 
 from typing import List
 
