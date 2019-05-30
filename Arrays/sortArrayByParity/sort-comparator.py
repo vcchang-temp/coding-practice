@@ -3,8 +3,8 @@
 # Input: array of non-negative integers, arr
 
 # Custom comparator approach
-# Time: O(n)  -> check every int in worst case
-# Space: O(1) -> stable in-place sort
+# Time: O(nlogn) -> Python uses Timsort (a mix between merge and insertion sort)
+# Space: O(1)    -> stable in-place sort
 
 from typing import List
 import copy
