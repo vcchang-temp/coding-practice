@@ -7,7 +7,8 @@
 # Input: non-empty array with distinct integers arr,
 # integer target sum targetSum
 
-# Assumptions: arr is sorted
+# Assumptions: arr is sorted (binary search does not work
+#              unless array is sorted)
 
 # Time: O(logn) -> binary search cuts number of search 
 #                  items in half in each iteration; runtime
@@ -58,6 +59,13 @@ if __name__ == "__main__":
     actual = findTwoNumberSum(arr, targetSum2)
     assert actual == expected
     print(f"Found the two numbers that add up to {targetSum2} --> {actual}")
+
+    arr2 = [2, 3, 4]
+    targetSum = 6
+    expected = [2, 4]
+    actual = findTwoNumberSum(arr2, targetSum)
+    assert actual == expected
+    print(f"Found the two numbers that add up to {targetSum} --> {actual}")
 
     targetSumFail = 11
     expected = []
