@@ -10,14 +10,16 @@
 # Assumptions: arr is sorted (binary search does not work
 #              unless array is sorted)
 
-# Time: O(logn) -> binary search cuts number of search 
+# Time: O(nlogn) -> binary search cuts number of search 
 #                  items in half in each iteration; runtime
 #                  equals number of times array is divided 
 #                  = log2(n)
 #                  eg: n = 8 
 #                      8 -> 4 -> 2 -> 1
 #                      log2(8) = 3
-# Space: O(1)   -> results array of len 2
+#                  ... but you may have to search n times
+#                  in worst case, so O(n*logn) = O(nlogn)
+# Space: O(1)    -> results array of len 2
 
 from typing import List
 import math
