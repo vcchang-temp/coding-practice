@@ -2,7 +2,7 @@
 # (return sorted array if can find target sum;
 # empty array if cannot find target sum)
 
-# Sorting + two nested loops approach
+# Sorting + brute force approach
 # Input: non-empty array with distinct integers arr,
 # integer target sum targetSum
 
