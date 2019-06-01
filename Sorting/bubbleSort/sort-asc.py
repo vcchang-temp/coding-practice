@@ -2,8 +2,8 @@
 
 # Input: int array, arr
 
-# Time: O(n^2) -> traverse arr n, n-1, n-2,... n-n+1
-#                 times = n(n-1)/2 times = O(n^2)
+# Time: O(n^2) -> traverse arr n, n-1, n-2,... 1
+#                 times = n(n+1)/2 times = O(n^2)
 # Space: O(1)  -> in-place sort, stable
 
 from typing import List
