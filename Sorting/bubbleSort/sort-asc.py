@@ -19,16 +19,16 @@ def sort(arr: List[int]):
 
 if __name__ == "__main__":
     arr = [9, 4, 6, 1, 5, 2, 7, 8, 3]
-    arr.sort()
+    sort(arr)
     assert arr == [1, 2, 3, 4, 5, 6, 7, 8, 9]
     print(f"WOoOoOooOO bubble-sOrted the arr {arr}")
 
     allZeroesArr = [0, 0, 0, 0]
-    allZeroesArr.sort()
+    sort(allZeroesArr)
     assert allZeroesArr == [0, 0, 0, 0]
     print(f"WOoOoOooOO bubble-sOrted the arr {allZeroesArr}")
 
     alreadyAscArr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    alreadyAscArr.sort()
+    sort(alreadyAscArr)
     assert alreadyAscArr == [1, 2, 3, 4, 5, 6, 7, 8, 9]
     print(f"WOoOoOooOO bubble-sOrted the arr {alreadyAscArr}")
