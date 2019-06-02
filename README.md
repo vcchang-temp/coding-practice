@@ -6,3 +6,4 @@ Questions are arranged by category:
 * [Strings](https://github.com/vcchang/coding-practice/tree/master/Strings)
 * [Arrays](https://github.com/vcchang/coding-practice/tree/master/Arrays)
 * [Sorting](https://github.com/vcchang/coding-practice/tree/master/Sorting)
+* [Searching](https://github.com/vcchang/coding-practice/tree/master/Searching)
