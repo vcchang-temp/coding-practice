@@ -28,7 +28,7 @@ if __name__ == "__main__":
     assert allZeroesArr == [0, 0, 0, 0]
     print(f"WOoOoOooOO bubble-sOrted the arr {allZeroesArr}")
 
-    alreadyAscArr = [9, 8, 7, 6, 5, 4, 3, 2, 1]
-    sort(alreadyAscArr)
-    assert alreadyAscArr == [9, 8, 7, 6, 5, 4, 3, 2, 1]
-    print(f"WOoOoOooOO bubble-sOrted the arr {alreadyAscArr}")
+    alreadyDescArr = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    sort(alreadyDescArr)
+    assert alreadyDescArr == [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    print(f"WOoOoOooOO bubble-sOrted the arr {alreadyDescArr}")
