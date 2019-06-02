@@ -9,7 +9,7 @@
 from typing import List
 
 def sort(arr: List[int]):
-    for i in range(len(arr)):
+    for i in range(len(arr)-1):  # no need to sort on the last int
         currMin = i
         for j in range(i+1, len(arr)):
             if arr[j] < arr[currMin]:
