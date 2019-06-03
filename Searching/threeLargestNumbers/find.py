@@ -3,7 +3,8 @@
 
 # Input: int array, arr
 
-# Brute force approach
+# Brute force approach (without using library functions
+# like max and sort)
 # Time: O(n)  -> iterate through arr three times ->
 #                O(3*n) ~= O(n)
 # Space: O(n) -> create array of three nums -> O(n)
