@@ -7,9 +7,9 @@
 # like max, sort, remove, insert)
 # Time: O(n)  -> iterate through arr three times ->
 #                O(3*n) ~= O(n)
-# Space: O(n) -> create three arrays of three nums -> O(n)
-#                in cases when n <= 3*3; otherwise more
-#                like O(1)
+# Space: O(1) -> create array of three nums and
+#                not O(n) because created array
+#                does not grow with input
 
 from typing import List
 
