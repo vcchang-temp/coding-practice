@@ -4,32 +4,30 @@
 # Input: int array, arr
 
 # Brute force approach
-# Time: O(nlogn) -> Python uses Timsort -> O(nlogn)
-#                   which is > runtime of findLargestNum
-#                   helper (O(n)) * 3 = O(3n) ~= O(n)
-# Space: O(n)    -> create array of three nums -> O(n)
-#                   in cases when n <= 3; otherwise more
-#                   like O(1)
+# Time: O(n)  -> iterate through arr three times ->
+#                O(3*n) ~= O(n)
+# Space: O(n) -> create array of three nums -> O(n)
+#                in cases when n <= 3; otherwise more
+#                like O(1)
 
 from typing import List
 
 def find(arr: List[int]):
-    result = []
+    largestNums = []
 
     firstLargestNum = findLargestNum(arr)
-    result.append(firstLargestNum)
+    largestNums.insert(0, firstLargestNum)
     arr.remove(firstLargestNum)
 
     secondLargestNum = findLargestNum(arr)
-    result.append(secondLargestNum)
+    largestNums.insert(0, secondLargestNum)
     arr.remove(secondLargestNum)
 
     thirdLargestNum = findLargestNum(arr)
-    result.append(thirdLargestNum)
+    largestNums.insert(0, thirdLargestNum)
     # technically no need to remove third largest num
 
-    result.sort()
-    return result
+    return largestNums
 
 def findLargestNum(arr: List[int]):
     maxNum = arr[0]
