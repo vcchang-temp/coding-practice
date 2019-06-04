@@ -7,3 +7,4 @@ Questions are arranged by category:
 * [Arrays](https://github.com/vcchang/coding-practice/tree/master/Arrays)
 * [Sorting](https://github.com/vcchang/coding-practice/tree/master/Sorting)
 * [Searching](https://github.com/vcchang/coding-practice/tree/master/Searching)
+* [Recursion](https://github.com/vcchang/coding-practice/tree/master/Recursion)
