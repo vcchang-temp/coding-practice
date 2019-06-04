@@ -2,7 +2,7 @@
 
 # Input: int n
 
-# Memoization approach
+# Memoization-iterative-list approach
 # (Memoization = technique often used in dynamic 
 # programming to store results and taking advantage
 # of the stored results to avoid making the same
