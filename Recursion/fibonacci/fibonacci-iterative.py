@@ -2,6 +2,7 @@
 
 # Input: int n
 
+# Iterative approach
 # Time: O(n)  -> iterate through each int of n
 # Space: O(1) -> space is not growing according to n
 

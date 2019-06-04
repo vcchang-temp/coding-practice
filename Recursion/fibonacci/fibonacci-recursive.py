@@ -2,6 +2,7 @@
 
 # Input: int n
 
+# Recursive approach
 # Time: O(2^n) -> exponential runtime; fib runtime =
 #                 number of calls made to fib. Num of
 #                 calls made can be modelled in a (binary) 
