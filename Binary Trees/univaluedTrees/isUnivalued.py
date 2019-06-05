@@ -71,7 +71,7 @@ if __name__ == "__main__":
     expectedDeep = True
     actualDeep = isUnivalued(rootDeep)
     assert actualDeep == expectedDeep
-    print("Awesome, we found ourselves a univalued tree: [1, 1, 1, None, 1, 1, None, None, None, 1, None]") # TODO Check if correct
+    print("Awesome, we found ourselves a univalued tree: [1, 1, 1, None, 1, 1, None, None, None, 1, None]")
 
     rootDeepNotAllSame = Node(1)
     rootDeepNotAllSame.left = Node(1)
