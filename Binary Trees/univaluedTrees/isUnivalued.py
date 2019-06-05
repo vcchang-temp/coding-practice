@@ -84,4 +84,4 @@ if __name__ == "__main__":
     expectedDeepNotAllSame = False
     actualDeepNotAllSame = isUnivalued(rootDeepNotAllSame)
     assert actualDeepNotAllSame == expectedDeepNotAllSame
-    print(f"No univalued tree here: [1, 1, 1, None, 1, 1, None, None, None, 9]") # TODO Check if correct
+    print(f"No univalued tree here: [1, 1, 1, None, 1, 1, None, None, None, 9]")
