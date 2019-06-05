@@ -8,3 +8,4 @@ Questions are arranged by category:
 * [Sorting](https://github.com/vcchang/coding-practice/tree/master/Sorting)
 * [Searching](https://github.com/vcchang/coding-practice/tree/master/Searching)
 * [Recursion](https://github.com/vcchang/coding-practice/tree/master/Recursion)
+* [Binary Trees](https://github.com/vcchang/coding-practice/tree/master/Binary%20Trees)
