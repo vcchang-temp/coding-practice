@@ -4,6 +4,7 @@
 
 # Input: Node root
 
+# Recursive approach
 # Time: O(n)  -> in worst case, tree is a straight
 #                line with n-1 height (recall root
 #                is level 0) -> O(n-1) ~= O(n)
