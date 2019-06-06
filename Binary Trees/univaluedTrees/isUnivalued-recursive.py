@@ -10,7 +10,7 @@
 #                is level 0) -> O(n-1) ~= O(n)
 # Space: O(n) -> call stack can only grow as tall as 
 #                the max depth of the tree -> 
-#                n-1 height <= depth <= log2(n);
+#                n-1 (height) <= depth <= log2(n);
 #                therefore, max memory consumed is
 #                O(n-1) ~= O(n)
 
