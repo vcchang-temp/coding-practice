@@ -2,6 +2,7 @@
 
 # Input: Node root
 
+# Recursive approach
 # Time: O(n)  -> must visit every node of tree with n nodes
 # Space: O(n) -> memory consumed is at most the depth of the
 #                tree -> depth of tree == height of tree ==
