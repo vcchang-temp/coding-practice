@@ -22,7 +22,7 @@ def areReflections(root1: Node, root2: Node):
         return False
     return root1.val == root2.val \
         and areReflections(root1.left, root2.right) \
-        and areReflections(root2.left, root1.right)
+        and areReflections(root1.right, root2.left)
 
 if __name__ == "__main__":
     rootNone = None
