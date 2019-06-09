@@ -5,13 +5,9 @@
 # Input: Node root
 
 # Iterative approach (level-order traversal)
-# Time: O(n)  -> must visit every node to find max
-#                depth
-# Space: O(n) -> in worst case, tree is linear and
-#                memory consumed on call stack is
-#                n-1 frames (again, n-1 = max depth
-#                of a linear tree). Best case depth
-#                = depth of a full tree = log2(n)
+# Time: O(n)  -> must add every node to deque to find
+#                max depth
+# Space: O(n) -> create new deque of len n
 
 from node import Node
 from collections import deque
