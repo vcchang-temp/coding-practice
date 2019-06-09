@@ -14,11 +14,9 @@ def isSymmetric(root: Node):
     return areReflections(root, root)
 
 def areReflections(root1: Node, root2: Node):
-    if root1 == None and root2 == None:
+    if not root1 and not root2:
         return True
-    if root1 == None and root2 != None:
-        return False
-    if root1 != None and root2 == None:
+    if not root1 or not root2:
         return False
     return root1.val == root2.val \
         and areReflections(root1.left, root2.right) \
