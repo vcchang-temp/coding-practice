@@ -8,11 +8,7 @@
 #                tree -> depth of tree == height of tree ==
 #                n-1 nodes -> O(n-1) ~= O(n) space
 
-class Node:
-    def __init__(self, val: int):
-        self.val = val
-        self.left = None
-        self.right = None
+from node import Node
 
 def mirror(root: Node):
     if root == None:

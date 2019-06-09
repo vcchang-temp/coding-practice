@@ -14,11 +14,7 @@
 #                therefore, max memory consumed is
 #                O(n-1) ~= O(n)
 
-class Node:
-    def __init__(self, val: int):
-        self.val = val
-        self.left = None
-        self.right = None
+from node import Node
     
 def isUnivalued(root: Node):
     nodeVals = []
