@@ -4,9 +4,9 @@
 
 # Recursive approach
 # Time: O(n)  -> must visit every node of tree with n nodes
-# Space: O(n) -> memory consumed is at most the depth of the
-#                tree -> depth of tree == height of tree ==
-#                n-1 nodes -> O(n-1) ~= O(n) space
+# Space: O(n) -> memory consumed is at most the max depth of
+#                the tree -> depth of tree == height of tree
+#                == n-1 nodes -> O(n-1) ~= O(n) space
 
 from node import Node
 
