@@ -3,21 +3,26 @@
 # Input: Node root
 
 # Recursive approach
-# Time: 
-# Space: 
+# Time: O(n)  -> must visit every node in each tree
+# Space: O(n) -> cal stack memory consumed due to recursion
+#                grows to be max n-1 frames (max depth of
+#                tree) 
 
 from node import Node
 
 def isSymmetric(root: Node):
-    if root == None:
+    return areReflections(root, root)
+
+def areReflections(root1: Node, root2: Node):
+    if root1 == None and root2 == None:
         return True
-    if root.left == None and root.right != None:
+    if root1 == None and root2 != None:
         return False
-    if root.left != None and root.right == None:
+    if root1 != None and root2 == None:
         return False
-    if root.left and root.right and root.left.val != root.right.val:
-        return False
-    return isSymmetric(root.left) and isSymmetric(root.right)
+    return root1.val == root2.val \
+        and areReflections(root1.left, root2.right) \
+        and areReflections(root2.left, root1.right)
 
 if __name__ == "__main__":
     rootNone = None
