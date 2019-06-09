@@ -6,7 +6,7 @@
 # Time: O(n)  -> must visit every node in each tree
 # Space: O(n) -> cal stack memory consumed due to recursion
 #                grows to be max n-1 frames (max depth of
-#                tree) 
+#                tree in worst case, aka. straight-line tree) 
 
 from node import Node
 
