@@ -9,3 +9,4 @@ Questions are arranged by category:
 * [Searching](https://github.com/vcchang/coding-practice/tree/master/Searching)
 * [Recursion](https://github.com/vcchang/coding-practice/tree/master/Recursion)
 * [Binary Trees](https://github.com/vcchang/coding-practice/tree/master/Binary%20Trees)
+* [N-ary Trees](https://github.com/vcchang/coding-practice/tree/master/N-ary%20Trees)
