@@ -21,8 +21,6 @@ import math
 
 def find(bst: Node, target: int):
     closestVal = math.inf
-    if not bst:
-        return closestVal
     while bst:
         if abs(target - closestVal) > abs(target - bst.val):
             closestVal = bst.val
