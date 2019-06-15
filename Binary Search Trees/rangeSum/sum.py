@@ -5,21 +5,33 @@
 
 # Assumption: bst is guaranteed to have unique values
 
-# Input: Node bst, int left, int right
+# Input: Node bst (with n nodes), int left, int right
 
-# Time: 
-# Space: 
+# Time: O(n)  -> worst case = linear tree, height = n-1
+# Space: O(n) -> call stack will only grow as tall as 
+#                max depth (ie: height) of tree -> height
+#                = n-1 = tallest tree
 
 from node import Node
 
 def sum(bst: Node, left: int, right: int):
+    if not bst:
+        return 0
+    sumSoFar = 0
+    if left <= bst.val <= right:
+        sumSoFar += bst.val
+    if bst.val > left or bst.val > right:
+        sumSoFar += sum(bst.left, left, right)
+    if bst.val < right or bst.val < left:
+        sumSoFar += sum(bst.right, left, right)
+    return sumSoFar
 
 if __name__ == "__main__":
     bstNone = None
     leftNone = 1
     rightNone = 17
     expectedNone = 0
-    actualNone = find(bstNone, leftNone, rightNone)
+    actualNone = sum(bstNone, leftNone, rightNone)
     assert actualNone == expectedNone
     print(f"Range of sum in bst None = {actualNone}")
 
@@ -27,7 +39,7 @@ if __name__ == "__main__":
     leftOne = -1
     rightOne = 2
     expectedOne = 1
-    actualOne = find(bstOne, leftOne, rightOne)
+    actualOne = sum(bstOne, leftOne, rightOne)
     assert actualOne == expectedOne
     print(f"Range of sum in bst [1] = {actualOne}")
 
@@ -42,6 +54,6 @@ if __name__ == "__main__":
     leftComplex = 6
     rightComplex = 19
     expectedComplex = 6 + 10 + 13 + 17 + 19
-    actualComplex = find(bstComplex, leftComplex, rightComplex)
+    actualComplex = sum(bstComplex, leftComplex, rightComplex)
     assert actualComplex == expectedComplex
     print(f"Range of sum in bst [10, 4, 17, 2, 6, 13, 21, None, None, None, None, None, None, 19, None] = {actualComplex}")
