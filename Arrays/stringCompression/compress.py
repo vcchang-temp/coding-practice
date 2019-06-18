@@ -14,11 +14,6 @@ from typing import List
 def compress(chars: List[str]):
     if not chars or len(chars) == 1:
         return len(chars)
-    # currCharIdx = 0
-    # currCharRunnerIdx = 0
-    # charCount = 0
-    # currIdx = 0
-    # store a tuple with char and count in chrono order in chars
     runner = 0
     count = 0
     currCharIdx = 0
@@ -47,46 +42,13 @@ def compress(chars: List[str]):
         temp = chars[counter]
         moveByOne(chars, counter, numUniqueChars - counter)
         chars[counter], chars[counter + 1] = chars[counter][0], chars[counter][1]
-    # while currCharRunnerIdx < len(chars):
-    #     while chars[currCharRunnerIdx] == chars[currCharIdx]:
-    #         charCount += 1
-    #         currCharRunnerIdx += 1
-        
-    #     if charCount == 1:
-    #         chars[currIdx] = chars[currCharIdx]
-    #         charCount = 0
-    #         currIdx += 1
-    #     else:
-    #         chars[currIdx] = chars[currCharIdx]
-    #         chars[currIdx + 1] = charCount
-    #         charCount = 0
-    #         currIdx += 2
-    #     currCharRunnerIdx += + 1
-    # result = chars[:currIdx + 1]
+
     return len(result)
 
 def moveByOne(chars: List[str], currIdx: int, lenOfRemList: int):
     count = 0
     while count < lenOfRemList:
-        chars[count + 1] = chars[currIdx]
-
-# def countOneChars(chars: List[str], numUniqueChars: int):
-#     idx = 0
-#     numOneChars = 0
-#     while idx < numUniqueChars:
-#         if chars[idx][1] == 1:
-#             numOneChars += 1
-#     return numOneChars
-
-# def findNumUniqueChars(chars: List[str]):
-#     count = 1
-#     front, back = 0, 1
-#     while back < len(chars):
-#         if chars[front] != chars[back]:
-#             count += 1
-#         front += 1
-#         back += 1
-#     return count 
+        chars[count + 1] = chars[currIdx] 
 
 if __name__ == "__main__":
     charsEmpty = []
