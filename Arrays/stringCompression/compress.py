@@ -33,27 +33,29 @@ def compress(chars: List[str]):
         return chars
     elif numUniqueChars * 2 > len(chars):
         # only expand the ones w/o a one char
-        counter = 0
-        while counter < numUniqueChars:
-            if chars[counter][1] == 1:
-                chars[counter] = chars[counter][0]
+        currUniqueCharIdx = 0
+        while currUniqueCharIdx < numUniqueChars:
+            if chars[currUniqueCharIdx][1] == 1:
+                chars[currUniqueCharIdx] = chars[currUniqueCharIdx][0]
+                currUniqueCharIdx += 1
             else:
-                temp = chars[counter]
-                moveByOne(chars, counter, numUniqueChars - counter)
-                chars[counter], chars[counter + 1] = chars[counter][0], chars[counter][1]
-            counter += 1
+                move(chars, currUniqueCharIdx, numUniqueChars)
+                chars[currUniqueCharIdx], chars[currUniqueCharIdx + 1] = chars[currUniqueCharIdx][0], chars[currUniqueCharIdx][1]
+                currUniqueCharIdx += 2
     else:
-        # normal case
-        temp = chars[counter]
-        moveByOne(chars, counter, numUniqueChars - counter)
-        chars[counter], chars[counter + 1] = chars[counter][0], chars[counter][1]
-    result = chars[numUniqueChars - counter]
+        # normal case, no one chars (expand all)
+        move(chars, currUniqueCharIdx, numUniqueChars)
+        chars[currUniqueCharIdx], chars[currUniqueCharIdx + 1] = chars[currUniqueCharIdx][0], chars[currUniqueCharIdx][1]
+        currUniqueCharIdx += 2
+    result = chars[numUniqueChars - currUniqueCharIdx]
     return len(result)
 
-def moveByOne(chars: List[str], currIdx: int, lenOfRemList: int):
-    count = 0
-    while count < lenOfRemList:
-        chars[count + 1] = chars[currIdx]
+def move(chars: List[str], currUniqueCharIdx: int, remUniqueCharsLen: int):
+    spacesNeeded = remUniqueCharsLen * 2
+    currIdx = currUniqueCharIdx + spacesNeeded
+    while currIdx >= currUniqueCharIdx:
+        chars[currIdx], chars[currIdx - 1] = chars[currUniqueCharIdx][1], chars[currUniqueCharIdx][0]
+        currIdx -= 2
 
 if __name__ == "__main__":
     charsEmpty = []
