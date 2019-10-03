@@ -11,4 +11,4 @@ Questions are arranged by category:
 * [Binary Trees](https://github.com/vcchang/coding-practice/tree/master/Binary%20Trees)
 * [N-ary Trees](https://github.com/vcchang/coding-practice/tree/master/N-ary%20Trees)
 * [Binary Search Trees](https://github.com/vcchang/coding-practice/tree/master/Binary%20Search%20Trees)
-* [Linked Lists](https://github.com/vcchang/coding-practice/tree/master/Linked%Lists)
+* [Linked Lists](https://github.com/vcchang/coding-practice/tree/master/Linked%20Lists)
