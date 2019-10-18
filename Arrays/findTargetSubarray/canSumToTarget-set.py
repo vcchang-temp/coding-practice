@@ -18,13 +18,13 @@ def canSumTo(target: int, arr: List):
         if runningTotal == target: # case 1: all nums seen sum up to target
             return True
 
-        if runningTotal not in currentSums: # store largest subarray seen so far
+        if runningTotal not in currentSums: # store largest subarray total seen so far
             currentSums.add(runningTotal)
 
-        intermediateSum = runningTotal - target # case 2: intermediateSum == subarray total
-        if intermediateSum in currentSums:      # that remains after target has been subtracted
-            return True                         # from the largest subarray total seen so far
-    return False
+        diff = runningTotal - target    # case 2: diff == subarray total I don't want
+        if diff in currentSums:         # eg: runningTotal = 12, target = 6
+            return True                 # diff = 12-6 = 6 -> the subarray total I'm 
+    return False                        # looking to get rid of to make target 6
 
 if __name__ == "__main__":
     arr = [4, 2, -1, 3, 5, 6]
