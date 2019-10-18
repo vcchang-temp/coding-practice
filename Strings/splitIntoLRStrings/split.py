@@ -1,5 +1,4 @@
-# Split into L, R strings
-# Return maximum number of L, R substrings 
+# Find maximum number of 'LR'/'RL' substrings 
 
 # Time: O(n)  -> iterate through each char in given s of len n
 # Space: O(n) -> build stack of at most len n
@@ -37,22 +36,22 @@ if __name__ == "__main__":
     expected = 4
     actual = split(s)
     assert actual == expected
-    print(f"Split {s} into {actual} L, R/R, L substrings!")
+    print(f"Split {s} into {actual} LR/RL strings!")
 
     s = "RLLLLRRRLR"
     expected = 3
     actual = split(s)
     assert actual == expected
-    print(f"Split {s} into {actual} L, R/R, L substrings!")
+    print(f"Split {s} into {actual} LR/RL strings!")
 
     s = "LLLLRRRR"
     expected = 1
     actual = split(s)
     assert actual == expected
-    print(f"Split {s} into {actual} L, R/R, L substrings!")
+    print(f"Split {s} into {actual} LR/RL strings!")
 
     s = "RRLRRLRLLLRL"
     expected = 4
     actual = split(s)
     assert actual == expected
-    print(f"Split {s} into {actual} L, R/R, L substrings!")
+    print(f"Split {s} into {actual} LR/RL strings!")
