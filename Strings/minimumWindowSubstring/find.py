@@ -1,7 +1,9 @@
 # Minimum window substring
 
-# Time: 
-# Space: 
+# Time: O(s + t)  -> s = length of search string, t = length of target string
+#                    s = need to traverse string at most twice
+#                    t = time taken to build dictionary with target chars
+# Space: O(s + t) -> answer may at most be of len s and dictionary takes up len t space
 
 from collections import Counter
 
