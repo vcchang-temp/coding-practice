@@ -47,3 +47,32 @@ def minWindow(s: str, t: str):
         right += 1
     
     return "" if currOptimalWindow[0] == float("inf") else s[currOptimalWindow[1] : currOptimalWindow[2] + 1]
+
+if __name__ == "__main__":
+    s = "ABBABEST"
+    t = "AT"
+    expected = "ABEST"
+    actual = minWindow(s, t)
+    assert actual == expected
+    print(f"Yay, found the minimum substring of {s} given {t}: {actual}")
+
+    s = "howonearthdoyoufindthisstring"
+    t = "eyo"
+    expected = "earthdoy"
+    actual = minWindow(s, t)
+    assert actual == expected
+    print(f"Yay, found the minimum substring of {s} given {t}: {actual}")
+
+    s = "what"
+    t = ""
+    expected = ""
+    actual = minWindow(s, t)
+    assert actual == expected
+    print(f"Yay, found the minimum substring of {s} given {t}: {actual}")
+
+    s = ""
+    t = "why"
+    expected = ""
+    actual = minWindow(s, t)
+    assert actual == expected
+    print(f"Yay, found the minimum substring of {s} given {t}: {actual}")
