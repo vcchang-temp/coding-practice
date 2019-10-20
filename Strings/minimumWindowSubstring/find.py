@@ -7,7 +7,7 @@
 
 from collections import Counter
 
-def minWindow(self, s: str, t: str) -> str:
+def minWindow(s: str, t: str):
     if not s or not t:
         return ""
     
