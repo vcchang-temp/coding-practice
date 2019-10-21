@@ -2,7 +2,7 @@
 
 # Time: O(nm)  -> n = # of emails, m = len of each email 
 #                 (m can be at most m-2 chars (@ + following char) ~= m)
-# Space: O(nm) -> make set with at most n strings of len m
+# Space: O(nm) -> make two sets with at most n emails of len m
 
 from typing import List
 
