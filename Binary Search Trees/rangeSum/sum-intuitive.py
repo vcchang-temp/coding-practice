@@ -5,10 +5,12 @@
 
 # Assumption: bst is guaranteed to have unique values
 
-# More intuitive approach
+# More intuitive and efficient approach
 # Input: Node bst (with n nodes), int left, int right
 
-# Time: O(n)  -> worst case = linear tree, height = n-1
+# Time: O(n)  -> worst case = linear tree, height = n-1;
+#                more efficient in the sense that can
+#                eliminate visiting nodes out of the range
 # Space: O(n) -> call stack will only grow as tall as 
 #                max depth (ie: height) of tree -> height
 #                = n-1 = tallest tree
