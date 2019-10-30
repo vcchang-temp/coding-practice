@@ -1,13 +1,11 @@
 # Single row keyboard
-# Assume keyboard = alphabet
+# Assume keyboard = English alphabet
 
 # ASCII approach
 # Time: O(n)  -> iterate through every char in string with n chars
-# Space: O(1) -> output remains constant with regards to input
+# Space: O(1) -> space used remains constant with regards to input
 
-from typing import List
-
-def time(keyboard: List, word: str):
+def time(keyboard: str, word: str):
     total = 0
     prevVal = ord("a")
     for letter in word:
