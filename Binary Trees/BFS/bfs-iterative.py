@@ -35,7 +35,7 @@ def bfs(root: Node):
 
     while q:
         curr = q.popleft()
-        if curr and curr not in path:
+        if curr:
             path.append(curr)
             if curr.left:
                 q.append(curr.left)
