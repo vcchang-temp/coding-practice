@@ -35,14 +35,14 @@ def bfs(root: Node):
 
     while q:
         curr = q.popleft()
-        if curr:
-            path.append(curr.val)
+        if curr and curr not in path:
+            path.append(curr)
             if curr.left:
                 q.append(curr.left)
             if curr.right:
-                q.append(curr.right)            
+                q.append(curr.right)
     
-    return path
+    return [n.val for n in path]
 
 if __name__ == "__main__":
     root = Node(1)
