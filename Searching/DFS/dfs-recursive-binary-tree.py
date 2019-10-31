@@ -3,12 +3,8 @@
 
 # Recursive approach
 # Time: O(n)  -> visit each node in tree w/ n nodes once
-# Space: O(n) -> visited list takes up n space (slightly 
-#                wasteful to have a results array when
-#                could just dereference nodes in visited
-#                after traversing tree, but just doing it
-#                for convenience).
-#                call stack formed in recursion can take up 
+# Space: O(n) -> path list takes up n space.
+#                Call stack formed in recursion can take up 
 #                - in worst case - n space (tree that's a 
 #                straight line), but will in best case take 
 #                up logn space for a tree that's completely 
@@ -24,22 +20,19 @@ class Node:
         self.val = val
 
 def dfs(root: Node):
-    visited = [] # a bit redundant but more readable to me
-    result = []  # could just be a one-liner:
-    dfsHelper(root, visited, result)
-    return result # return dfsHelper(root, [], [])
+    path = []  # could just be a one-liner:
+    dfsHelper(root, path) # return dfsHelper(root, [], [])
+    return path
 
-def dfsHelper(curr: Node, visited: List, result: List):
+def dfsHelper(curr: Node, path: List):
     if not curr:
-        return result
-    if curr not in visited:
-        visited.append(curr)
-        result.append(curr.val)
-        if curr.left:
-            dfsHelper(curr.left, visited, result)
-        if curr.right:
-            dfsHelper(curr.right, visited, result)
-    return result
+        return path
+    path.append(curr.val)
+    if curr.left:
+        dfsHelper(curr.left, path)
+    if curr.right:
+        dfsHelper(curr.right, path)
+    return path
 
 if __name__ == "__main__":
     root = Node(1)

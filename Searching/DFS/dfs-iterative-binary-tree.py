@@ -3,12 +3,8 @@
 
 # Iterative approach
 # Time: O(n)  -> visit each node in tree w/ n nodes once
-# Space: O(n) -> visited list takes up n space (slightly 
-#                wasteful to have a results array when
-#                could just dereference nodes in visited
-#                after traversing tree, but just doing it
-#                for convenience).
-#                stack can also take up - in worst case -
+# Space: O(n) -> path list takes up n space.
+#                Stack can also take up - in worst case -
 #                n space (tree that's a straight line),
 #                but will in best case take up logn space
 #                for a tree that's completely filled (ie:
@@ -23,21 +19,18 @@ class Node:
 
 def dfs(root: Node):
     stack = [root]
-    visited = [] # could use set, O(1) instead of O(n) lookup then
-    result = []
+    path = []
     
     while stack:
         curr = stack.pop()
-        if not curr or curr in visited:
+        if not curr:
             continue
-        visited.append(curr)
-        result.append(curr.val) # do stuff w/ curr here...
+        path.append(curr.val)
         if curr.right: # start w/ right to visit left child first when pop off stack
             stack.append(curr.right)
         if curr.left:
-            stack.append(curr.left)
-        # ... or here    
-    return result
+            stack.append(curr.left)  
+    return path
 
 if __name__ == "__main__":
     root = Node(1)
