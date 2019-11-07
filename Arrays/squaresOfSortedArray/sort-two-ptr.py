@@ -11,10 +11,12 @@
 from typing import List
 
 def sort(A: List[int]):
-    i = findIdxOfLastNegNum(A)
-    j = i + 1
-    res = []
+    j = 0
+    while j < len(A) and A[j] < 0:
+        j += 1 
+    i = j - 1
 
+    res = []
     while i >= 0 and j < len(A):
         if A[i]**2 <= A[j]**2:
             res.append(A[i]**2)
@@ -32,15 +34,6 @@ def sort(A: List[int]):
         j += 1
     
     return res
-
-def findIdxOfLastNegNum(A: List[int]):
-    i = 0
-    for num in A:
-        if num < 0:
-            i += 1
-        if num >= 0:
-            break
-    return i
 
 if __name__ == "__main__":
     arr = [-3, -2, 1, 3, 5]
