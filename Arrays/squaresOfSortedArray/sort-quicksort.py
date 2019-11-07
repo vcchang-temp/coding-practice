@@ -4,7 +4,7 @@
 
 # Input: array of integers in ascending order
 
-# List comprehension + sort (short) approach
+# Quicksort approach
 # Time: O(nlogn) -> quicksort divides array in half logn times and
 #                   visits each element once in arrays at each level
 #                   -> n visits * logn levels
