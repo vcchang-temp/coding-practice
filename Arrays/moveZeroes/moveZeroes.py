@@ -1,8 +1,8 @@
 # Move Zeroes
 # (Has to move them in-place)
 
-# Time: 
-# Space: 
+# Time: O(n)  -> iterate through array of len n integers
+# Space: O(1) -> transform array in-place
 
 from typing import List
 
