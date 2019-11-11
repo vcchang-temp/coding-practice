@@ -12,10 +12,11 @@ from typing import List
 
 def find(arr1: List[int], arr2: List[int]):
     arr1Set = set(arr1)
-    intersection = set()
-    for num in arr2:
-        if num in arr1Set and num not in intersection:
-            intersection.add(num)
+    arr2Set = set(arr2)
+    intersection = []
+    for num in arr1Set:
+        if num in arr2Set:
+            intersection.append(num)
     return sorted(intersection)
 
 if __name__ == "__main__":
