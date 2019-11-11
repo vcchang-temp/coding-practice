@@ -1,6 +1,6 @@
 # Delete Node in Linked List
 
-# No traversal, clever solution
+# No traversal, clever approach
 # Time: O(1)  -> only changing pointers
 # Space: O(1) -> space needed does not grow with input
 
