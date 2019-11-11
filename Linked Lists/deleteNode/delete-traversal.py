@@ -1,5 +1,6 @@
 # Delete Node in Linked List
 
+# Traversal approach
 # Time: O(n)  -> in worst case, traverse list of len n nodes 
 # Space: O(1) -> space needed does not grow with input
 
