@@ -2,7 +2,7 @@
 # (tree considered same if structurally the same and
 # nodes share same value)
 
-# Input: Node root1, Node root2
+# Input: Node p, Node q
 
 # Recursive approach (DFS)
 # Time: O(n)  -> must visit and compare every node in each tree
