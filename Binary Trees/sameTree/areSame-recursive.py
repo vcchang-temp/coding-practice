@@ -4,7 +4,7 @@
 
 # Input: Node root1, Node root2
 
-# Recursive approach
+# Recursive approach (DFS)
 # Time: O(n)  -> must visit and compare every node in each tree
 # Space: O(n) -> memory consumed is proportional to height of 
 #                tallest tree (n-1 = height of completely skewed 
