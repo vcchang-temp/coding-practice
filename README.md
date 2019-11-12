@@ -4,6 +4,7 @@ This repo is just for me to host my solutions to interview coding questions. I w
 
 Questions are arranged by category:
 * [Arrays](https://github.com/vcchang/coding-practice/tree/master/Arrays)
+* [2D Arrays](https://github.com/vcchang/coding-practice/tree/master/2D%Arrays)
 * [Binary Trees](https://github.com/vcchang/coding-practice/tree/master/Binary%20Trees)
 * [Binary Search Trees](https://github.com/vcchang/coding-practice/tree/master/Binary%20Search%20Trees)
 * [Graphs](https://github.com/vcchang/coding-practice/tree/master/Graphs)
