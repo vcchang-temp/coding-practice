@@ -10,6 +10,9 @@
 # Follow-up: How do you find the total number of confusing numbers 
 # in the array efficiently if N is big?
 
+# Time: O(n)  -> go through each digit from 1 to n
+# Space: O(n) -> create new strings of n digits ~ n 
+
 from typing import List
 
 def countConfusingNums(digits: List[int]) -> int:
